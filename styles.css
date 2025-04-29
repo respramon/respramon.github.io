@@ -30,13 +30,14 @@ body {
 }
 
 .profile-container {
-    position: absolute;
-    top: 130px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: -75px auto 40px auto;
     text-align: center;
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px 30px 30px 30px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     width: 90%;
@@ -74,8 +75,8 @@ h1 {
 
 main {
     max-width: 900px;
-    margin: 180px auto 40px auto;
-    padding: 0 20px;
+    margin: 20px auto 40px auto;
+    padding: 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
