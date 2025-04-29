@@ -1,37 +1,273 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Respramon S. Sihombing - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-dark: #0a192f;
+            --secondary-dark: #112240;
+            --neon-green: #00ff00;
+            --neon-cyan: #00ffff;
+            --text-light: #8892b0;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+        }
+
+        .tech-font {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .neon-glow {
+            text-shadow: 0 0 10px var(--neon-green),
+                         0 0 20px var(--neon-green),
+                         0 0 30px var(--neon-green);
+        }
+
+        .neon-border {
+            border: 2px solid var(--neon-green);
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .matrix-bg {
+            background-color: rgba(0, 255, 0, 0.05);
+        }
+
+        .hover-glow:hover {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px var(--neon-green);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <header class="cover-photo">
-        <img src="https://raw.githubusercontent.com/respramon/respramon.github.io/main/background1.jpg" alt="Cover Photo" class="cover-image" />
-        <div class="profile-container">
-            <img src="https://raw.githubusercontent.com/respramon/respramon.github.io/main/photo_2025-04-28_14-55-52.jpg" alt="Foto Profil" class="profile-photo" />
-            <h1>Respramon S. Sihombing (hombing)</h1>
-            <p class="description">Cyber Security and DFIR Enthusiast</p>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-[#0a192f] backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="tech-font text-2xl text-[#00ff00] neon-glow"></CyberSec></a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover-glow tech-font"><Home/></a>
+                    <a href="#about" class="hover-glow tech-font"><About/></a>
+                    <a href="#services" class="hover-glow tech-font"><Services/></a>
+                    <a href="#projects" class="hover-glow tech-font"><Projects/></a>
+                    <a href="#contact" class="hover-glow tech-font"><Contact/></a>
+                </div>
+                <button class="md:hidden text-[#00ff00]">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="awards-section">
-            <h2>Penghargaan</h2>
-            <div class="award">
-                <img src="https://raw.githubusercontent.com/respramon/respramon.github.io/main/Respramon%20Sollus%20Sihombing_signed_page-0001.jpg" alt="Finalist CTF Cyber Ops Clash" class="award-image" />
-                <p>Finalist CTF Cyber Ops Clash</p>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="tech-font text-4xl md:text-6xl mb-6 text-white">
+                    <span class="text-[#00ff00] neon-glow">> </span>
+                    Security Professional
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 typing-text">Protecting Digital Assets • Securing Networks • Ethical Hacking</p>
+                <a href="#contact" class="inline-block tech-font px-8 py-3 neon-border text-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a192f] transition-all duration-300">
+                    Initialize Contact_
+                </a>
             </div>
-            <div class="award">
-                <img src="images/finalist_asean.jpg" alt="Finalist Asean Cyber Shield Hacking Contest 2024 Student Division" class="award-image" />
-                <p>Finalist Asean Cyber Shield Hacking Contest 2024 Student Division</p>
-            </div>
-        </section>
-    </main>
+        </div>
+        <div class="absolute inset-0 matrix-bg"></div>
+    </section>
 
-    <footer>
-        <p>© 2024 Respramon S. Sihombing</p>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl mb-12 text-center text-white">
+                <span class="text-[#00ff00]">> </span>About_System
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg">Specialized in cybersecurity with expertise in penetration testing, vulnerability assessment, and security architecture. Committed to protecting organizations from cyber threats and implementing robust security measures.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-shield-alt text-[#00ff00]"></i>
+                            <span>Penetration Testing</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-bug text-[#00ff00]"></i>
+                            <span>Vulnerability Assessment</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-lock text-[#00ff00]"></i>
+                            <span>Security Architecture</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-code text-[#00ff00]"></i>
+                            <span>Secure Coding</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="neon-border p-6 rounded-lg">
+                    <div class="tech-font space-y-4">
+                        <p class="text-[#00ff00]">$ whoami</p>
+                        <p>Cybersecurity Professional</p>
+                        <p class="text-[#00ff00]">$ skills --list</p>
+                        <p>['Ethical Hacking', 'Network Security', 'Incident Response', 'Security Auditing']</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl mb-12 text-center text-white">
+                <span class="text-[#00ff00]">> </span>Security_Services
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 neon-border rounded-lg hover:bg-[#112240] transition-all duration-300">
+                    <i class="fas fa-shield-alt text-4xl text-[#00ff00] mb-4"></i>
+                    <h3 class="tech-font text-xl mb-4 text-white">Penetration Testing</h3>
+                    <p>Comprehensive security assessment to identify and exploit vulnerabilities in your systems.</p>
+                </div>
+                <div class="p-6 neon-border rounded-lg hover:bg-[#112240] transition-all duration-300">
+                    <i class="fas fa-lock text-4xl text-[#00ff00] mb-4"></i>
+                    <h3 class="tech-font text-xl mb-4 text-white">Security Consulting</h3>
+                    <p>Expert guidance on security architecture, risk management, and compliance requirements.</p>
+                </div>
+                <div class="p-6 neon-border rounded-lg hover:bg-[#112240] transition-all duration-300">
+                    <i class="fas fa-code text-4xl text-[#00ff00] mb-4"></i>
+                    <h3 class="tech-font text-xl mb-4 text-white">Secure Development</h3>
+                    <p>Implementation of secure coding practices and security testing in the development lifecycle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-[#112240]">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl mb-12 text-center text-white">
+                <span class="text-[#00ff00]">> </span>Recent_Projects
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden neon-border rounded-lg">
+                    <div class="p-6">
+                        <h3 class="tech-font text-xl mb-4 text-white">Network Security Audit</h3>
+                        <p class="mb-4">Conducted comprehensive security assessment for a financial institution, identifying and remediating critical vulnerabilities.</p>
+                        <div class="flex space-x-4 text-sm text-[#00ff00]">
+                            <span>Network Security</span>
+                            <span>Vulnerability Assessment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden neon-border rounded-lg">
+                    <div class="p-6">
+                        <h3 class="tech-font text-xl mb-4 text-white">Incident Response</h3>
+                        <p class="mb-4">Led incident response team in containing and mitigating a ransomware attack for a healthcare provider.</p>
+                        <div class="flex space-x-4 text-sm text-[#00ff00]">
+                            <span>Incident Response</span>
+                            <span>Malware Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="tech-font text-3xl md:text-4xl mb-12 text-center text-white">
+                <span class="text-[#00ff00]">> </span>Initialize_Contact
+            </h2>
+            <div class="max-w-2xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" placeholder="Enter_Name" class="w-full p-3 bg-transparent neon-border text-white tech-font focus:outline-none focus:border-[#00ffff]">
+                    </div>
+                    <div>
+                        <input type="email" placeholder="Enter_Email" class="w-full p-3 bg-transparent neon-border text-white tech-font focus:outline-none focus:border-[#00ffff]">
+                    </div>
+                    <div>
+                        <textarea placeholder="Enter_Message" rows="5" class="w-full p-3 bg-transparent neon-border text-white tech-font focus:outline-none focus:border-[#00ffff]"></textarea>
+                    </div>
+                    <button type="submit" class="w-full tech-font px-8 py-3 neon-border text-[#00ff00] hover:bg-[#00ff00] hover:text-[#0a192f] transition-all duration-300">
+                        Send_Message
+                    </button>
+                </form>
+                <div class="mt-12 flex justify-center space-x-8">
+                    <a href="#" class="text-2xl text-[#00ff00] hover-glow"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-2xl text-[#00ff00] hover-glow"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-2xl text-[#00ff00] hover-glow"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-[#112240]">
+        <div class="container mx-auto px-4 text-center">
+            <p class="tech-font text-sm">
+                <span class="text-[#00ff00]">&copy; </span>
+                2024 Cybersecurity Portfolio. All rights reserved.
+            </p>
+        </div>
     </footer>
+
+    <script>
+        // Typing effect
+        const text = document.querySelector('.typing-text');
+        const words = text.textContent.split(' • ');
+        text.textContent = '';
+        let wordIndex = 0;
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < words[wordIndex].length) {
+                text.textContent += words[wordIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else if (wordIndex < words.length - 1) {
+                setTimeout(() => {
+                    text.textContent = '';
+                    wordIndex++;
+                    charIndex = 0;
+                    type();
+                }, 1000);
+            } else {
+                setTimeout(() => {
+                    text.textContent = '';
+                    wordIndex = 0;
+                    charIndex = 0;
+                    type();
+                }, 1000);
+            }
+        }
+
+        // Start typing effect
+        type();
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
